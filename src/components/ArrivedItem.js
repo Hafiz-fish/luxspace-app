@@ -20,7 +20,7 @@ function ArrivedItem({ item }) {
         </div>
         <img src={item.image1} alt="" className="w-full h-full object-cover object-center" />
       </div>
-      <h5 className="text-lg font-semibold mt-4">{item.title}</h5>
+      <h5 className="text-lg font-semibold mt-4">{item.name}</h5>
       <span className="">{numberFormat(item.price)}</span>
       <a href="/detail" className="stretched-link"></a>
     </div>
