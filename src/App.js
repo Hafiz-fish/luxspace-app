@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header.js";
 import Hero from "./components/Hero.js";
@@ -9,6 +10,7 @@ import AsideMenu from "./components/AsideMenu.js";
 import Footer from "./components/Footer.js";
 import Offline from "./components/Offline.js";
 import Splash from "./pages/Splash.js";
+import Profile from "./pages/Profile.js";
 
 function App() {
   const [items, setItems] = React.useState([]);
@@ -71,4 +73,11 @@ function App() {
   );
 }
 
-export default App;
+export default function Routes() {
+  return (
+    <Router>
+      <Route path="/" exact component={App} />
+      <Route path="/profile" exact component={Profile} />
+    </Router>
+  );
+}
